@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useForm } from "react-hook-form"
 
 import axios from "axios"
@@ -10,8 +10,6 @@ const AdminLogin = () => {
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
       } = useForm()
 
       const navigate = useNavigate()
@@ -73,7 +71,7 @@ const AdminLogin = () => {
                 </div>
             </form>
 
-            <p className='mt-5 text-center text-gray-500 text-xs'>©2025 Book Store. All rights reserved.</p>
+            <p className='mt-5 text-center text-gray-500 text-xs'>©2025 BookReads. All rights reserved.</p>
         </div>
     </div>
   )

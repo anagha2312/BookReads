@@ -1,15 +1,17 @@
 {
-  "name": "book-store-backend",
+  "name": "bookreads-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "seed:admin": "node src/seed/createAdmin.js",
+    "seed:books": "node src/seed/seedBooks.js"
   },
   "keywords": [],
-  "author": "mamun",
-  "license": "ISC",
-  "description": "",
+  "author": "anagha2312",
+  "license": "MIT",
+  "description": "Express + MongoDB REST API for the BookReads bookstore application.",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",

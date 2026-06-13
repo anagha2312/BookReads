@@ -1,4 +1,3 @@
-import React from 'react'
 import footerLogo  from "../assets/footer-logo.png"
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
@@ -10,7 +9,10 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left Side - Logo and Nav */}
         <div className="md:w-1/2 w-full">
-          <img src={footerLogo} alt="Logo" className="mb-5 w-36" />
+          <div className="flex items-center gap-3 mb-5">
+            <img src={footerLogo} alt="BookReads logo" className="w-12" />
+            <span className="text-2xl font-bold font-secondary">BookReads</span>
+          </div>
           <ul className="flex flex-col md:flex-row gap-4">
             <li><a href="#home" className="hover:text-primary">Home</a></li>
             <li><a href="#services" className="hover:text-primary">Services</a></li>
@@ -40,9 +42,15 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center mt-10 border-t border-gray-700 pt-6">
         {/* Left Side - Privacy Links */}
-        <ul className="flex gap-6 mb-4 md:mb-0">
+        <ul className="flex flex-wrap gap-6 mb-4 md:mb-0">
           <li><a href="#privacy" className="hover:text-primary">Privacy Policy</a></li>
           <li><a href="#terms" className="hover:text-primary">Terms of Service</a></li>
+          <li>
+            Built by{" "}
+            <a href="https://github.com/anagha2312" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline underline-offset-2">
+              Anagha
+            </a>
+          </li>
         </ul>
 
         {/* Right Side - Social Icons */}

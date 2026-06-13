@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form"
@@ -11,8 +11,6 @@ const Login = () => {
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
       } = useForm()
 
       const onSubmit = async (data) => {
@@ -65,7 +63,7 @@ const Login = () => {
                     <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded focus:outline-none'>Login </button>
                 </div>
             </form>
-            <p className='align-baseline font-medium mt-4 text-sm'>Haven't an account? Please <Link to="/register" className='text-blue-500 hover:text-blue-700'>Register</Link></p>
+            <p className='align-baseline font-medium mt-4 text-sm'>Haven&apos;t an account? Please <Link to="/register" className='text-blue-500 hover:text-blue-700'>Register</Link></p>
 
             {/* google sign in */}
             <div className='mt-4'>
@@ -77,7 +75,7 @@ const Login = () => {
                 </button>
             </div>
 
-            <p className='mt-5 text-center text-gray-500 text-xs'>©2025 Book Store. All rights reserved.</p>
+            <p className='mt-5 text-center text-gray-500 text-xs'>©2025 BookReads. All rights reserved.</p>
         </div>
     </div>
   )

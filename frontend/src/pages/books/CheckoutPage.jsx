@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from 'react-router-dom';
@@ -14,11 +14,9 @@ const CheckoutPage = () => {
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
     } = useForm()
 
-    const [createOrder, {isLoading, error}] = useCreateOrderMutation();
+    const [createOrder, {isLoading}] = useCreateOrderMutation();
     const navigate =  useNavigate()
 
     const [isChecked, setIsChecked] = useState(false)
@@ -87,7 +85,7 @@ const CheckoutPage = () => {
                                             </div>
 
                                             <div className="md:col-span-5">
-                                                <label html="email">Email Address</label>
+                                                <label htmlFor="email">Email Address</label>
                                                 <input
 
                                                     type="text" name="email" id="email" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
@@ -96,7 +94,7 @@ const CheckoutPage = () => {
                                                     placeholder="email@domain.com" />
                                             </div>
                                             <div className="md:col-span-5">
-                                                <label html="phone">Phone Number</label>
+                                                <label htmlFor="phone">Phone Number</label>
                                                 <input
                                                     {...register("phone", { required: true })}
                                                     type="number" name="phone" id="phone" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="+123 456 7890" />

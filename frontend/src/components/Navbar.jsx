@@ -33,8 +33,9 @@ const Navbar = () => {
             <nav className="flex justify-between items-center">
                 {/* left side */}
                 <div className="flex items-center md:gap-16 gap-4">
-                    <Link to="/">
+                    <Link to="/" className="flex items-center gap-2">
                         <HiMiniBars3CenterLeft className="size-6" />
+                        <span className="text-xl font-bold font-secondary text-secondary">BookReads</span>
                     </Link>
 
                     {/* search input */}

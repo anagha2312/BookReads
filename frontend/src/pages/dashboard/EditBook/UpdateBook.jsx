@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import InputField from '../addBook/InputField'
 import SelectField from '../addBook/SelectField'
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { useFetchBookByIdQuery, useUpdateBookMutation } from '../../../redux/features/books/booksApi';
+import { useFetchBookByIdQuery } from '../../../redux/features/books/booksApi';
 import Loading from '../../../components/Loading';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -13,8 +13,7 @@ const UpdateBook = () => {
   const { id } = useParams();
   const { data: bookData, isLoading, isError, refetch } = useFetchBookByIdQuery(id);
   // console.log(bookData)
-  const [updateBook] = useUpdateBookMutation();
-  const { register, handleSubmit, setValue, reset } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   useEffect(() => {
     if (bookData) {
       setValue('title', bookData.title);
@@ -54,7 +53,7 @@ const UpdateBook = () => {
         confirmButtonText: "Yes, It's Okay!"
       });
       await refetch()
-    } catch (error) {
+    } catch {
       console.log("Failed to update book.");
       alert("Failed to update book.");
     }

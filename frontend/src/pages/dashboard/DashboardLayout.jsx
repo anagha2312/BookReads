@@ -1,7 +1,3 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-
-import Loading from '../../components/Loading';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineManageHistory } from "react-icons/md";
@@ -106,7 +102,7 @@ const DashboardLayout = () => {
         <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
           <div className="mr-6">
             <h1 className="text-4xl font-semibold mb-2">Dashboard</h1>
-            <h2 className="text-gray-600 ml-0.5">Book Store Inventory</h2>
+            <h2 className="text-gray-600 ml-0.5">BookReads Inventory</h2>
           </div>
           <div className="flex flex-col md:flex-row items-start justify-end -mb-3">
             <Link to="/dashboard/manage-books" className="inline-flex px-5 py-3 text-purple-600 hover:text-purple-700 focus:text-purple-700 hover:bg-purple-100 focus:bg-purple-100 border border-purple-600 rounded-md mb-3">

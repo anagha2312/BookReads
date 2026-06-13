@@ -43,14 +43,6 @@ export const AuthProvide = ({children}) => {
         const unsubscribe =  onAuthStateChanged(auth, (user) => {
             setCurrentUser(user);
             setLoading(false);
-
-            if(user) {
-               
-                const {email, displayName, photoURL} = user;
-                const userData = {
-                    email, username: displayName, photo: photoURL
-                } 
-            }
         })
 
         return () => unsubscribe();

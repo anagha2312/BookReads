@@ -1,8 +1,10 @@
 {
-  "name": "frontend",
+  "name": "bookreads-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "anagha2312",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,9 +1,15 @@
-# React + Vite
+# BookReads — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite + Tailwind CSS storefront and admin dashboard for the
+[BookReads](../README.md) bookstore application.
 
-Currently, two official plugins are available:
+See the [root README](../README.md) for full setup instructions, environment variables,
+and feature overview.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# book-app-frontend
+## Quick start
+
+```bash
+npm install
+cp .env.example .env   # fill in Firebase config and VITE_API_BASE_URL
+npm run dev
+```

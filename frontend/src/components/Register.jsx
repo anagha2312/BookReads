@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form"
 import { useAuth } from '../context/AuthContext';
@@ -7,12 +7,11 @@ import { useAuth } from '../context/AuthContext';
 const Register = () => {
     const [message, setMessage] = useState("");
     const {registerUser, signInWithGoogle} = useAuth();
+    const navigate = useNavigate()
     // console.log(registerUser)
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
       } = useForm()
 
     //   register user
@@ -22,6 +21,7 @@ const Register = () => {
         try {
             await registerUser(data.email, data.password);
             alert("User registered successfully!")
+            navigate("/")
         } catch (error) {
            setMessage("Please provide a valid email and password") 
            console.error(error)
@@ -79,7 +79,7 @@ const Register = () => {
             </button>
         </div>
 
-        <p className='mt-5 text-center text-gray-500 text-xs'>©2025 Book Store. All rights reserved.</p>
+        <p className='mt-5 text-center text-gray-500 text-xs'>©2025 BookReads. All rights reserved.</p>
     </div>
 </div>
   )
