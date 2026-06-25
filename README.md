@@ -224,11 +224,6 @@ Admin-protected routes require an `Authorization: Bearer <token>` header using t
 
 ---
 
-## Known Limitations
-
-- Book cover images are resolved from `frontend/src/assets/books/` by filename — adding a book via the admin dashboard requires the image file to already exist in that folder rather than uploading to cloud storage
-- Checkout is cash-on-delivery only; no payment gateway is integrated
-- The order history endpoint (`/api/orders/email/:email`) is not tied to a verified backend session — suitable for a portfolio project but would need Firebase token verification before production use
 
 ---
 
