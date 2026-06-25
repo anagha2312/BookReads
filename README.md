@@ -224,7 +224,4 @@ Admin-protected routes require an `Authorization: Bearer <token>` header using t
 
 ---
 
-
----
-
 <p align="center">Built by <a href="https://github.com/anagha2312">Anagha Prajapati</a></p>
