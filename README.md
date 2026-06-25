@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="frontend/src/assets/github-cover.png" alt="BookReads cover" width="100%" />
-</p>
+
 
 <h1 align="center">BookReads</h1>
 
