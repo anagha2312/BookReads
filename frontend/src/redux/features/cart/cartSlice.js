@@ -20,7 +20,7 @@ const cartSlice = createSlice({
                     showConfirmButton: false,
                     timer: 1500
                   });
-            } else(
+            } else {
                 Swal.fire({
                     title: "Already Added to the Cart",
                     text: "You won't be able to revert this!",
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
                     cancelButtonColor: "#d33",
                     confirmButtonText: "OK!"
                   })
-            )
+            }
         },
         removeFromCart: (state, action) => {
             state.cartItems =  state.cartItems.filter(item => item._id !== action.payload._id)
